@@ -3,12 +3,26 @@
   "version": "1.0.0",
   "description": "A web store UI test automation with Playwright",
   "scripts": {
-    "test": "playwright test && playwright show-report"
+    "test": "playwright test",
+    "test-headed": "playwright test --headed && playwright show-report",
+    "prepare": "husky install",
+    "lint": "eslint ."
   },
+  "husky": {
+    "hooks": {
+     "pre-commit": "npm run lint"
+    }
+  },
+  "main": "index.js",
+  "type": "module",
   "keywords": [],
   "author": "Andrii Koliadiuk",
   "license": "ISC",
-  "devDependencies": {
-    "@playwright/test": "^1.40.0"
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "eslint": "^8.55.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-playwright": "^0.20.0",
+    "husky": "^8.0.3"
   }
 }
