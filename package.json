@@ -5,6 +5,7 @@
   "scripts": {
     "test": "playwright test",
     "test-headed": "playwright test --headed && playwright show-report",
+    "test-smoke": "playwright test home-page-smoke.spec.js",
     "prepare": "husky install",
     "lint": "eslint ."
   },
