@@ -5,6 +5,10 @@ test('has title', async ({ homePage }) => {
   await expect(homePage.page).toHaveTitle(/eBay/);
 });
 
-test('get logo header', async ({ homePage }) => {
-  await expect(homePage.page.locator('h1 a[href *= "ebay.com"]')).toBeVisible();
+test('has header logo', async ({ homePage }) => {
+  await expect(homePage.logoHeader).toBeVisible();
+});
+
+test('has global search', async ({ homePage }) => {
+  await expect(homePage.globalSearchPanel).toBeVisible();
 });
