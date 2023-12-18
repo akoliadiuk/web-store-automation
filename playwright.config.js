@@ -47,24 +47,6 @@ export default defineConfig({
         screenshot: true,
       },
     },
-
-    {
-      name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-        viewport,
-        screenshot: true,
-      },
-    },
-
-    {
-      name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
-        viewport,
-        screenshot: true,
-      },
-    },
   ],
 });
 

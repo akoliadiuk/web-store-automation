@@ -4,6 +4,7 @@
   "description": "A web store UI test automation with Playwright",
   "scripts": {
     "test": "playwright test",
+    "test-smoke": "playwright test --grep @smoke --project chromium",
     "test-headed": "playwright test --headed && playwright show-report",
     "prepare": "husky install",
     "lint": "eslint ."
