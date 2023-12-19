@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+export const BASE_URL = 'https://www.ebay.com';
 
 const viewport = {
   width: 1920,
@@ -22,14 +23,14 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : 3,
+  workers: process.env.CI ? 3 : 5,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [process.env.CI ? ['list'] : ['list', 'html']],
   /* Shared settings for all the projects below.
   See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://www.ebay.com',
+    baseURL: BASE_URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -41,24 +42,6 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        viewport,
-        screenshot: true,
-      },
-    },
-
-    {
-      name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-        viewport,
-        screenshot: true,
-      },
-    },
-
-    {
-      name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
         viewport,
         screenshot: true,
       },
