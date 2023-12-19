@@ -6,7 +6,6 @@
     "test": "playwright test",
     "test-smoke": "playwright test --grep @smoke --project chromium",
     "test-headed": "playwright test --headed && playwright show-report",
-    "test-smoke": "playwright test home-page-smoke.spec.js",
     "prepare": "husky install",
     "lint": "eslint ."
   },
