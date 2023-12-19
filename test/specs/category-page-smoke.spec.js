@@ -2,9 +2,11 @@ import { expect } from '@playwright/test';
 import { test } from '../../pages/fixtures';
 
 const CATEGORY_PATH = 'Home-Garden/11700/bn_1853126';
+const CATEGORY_TITLE = /Home & Garden/;
+
 test('has title @smoke', async ({ categoryPage }) => {
   await categoryPage.open(CATEGORY_PATH);
-  await expect(categoryPage.page).toHaveTitle(/Home & Garden/);
+  await expect(categoryPage.page).toHaveTitle(CATEGORY_TITLE);
 });
 
 test('has header logo @smoke', async ({ categoryPage }) => {
