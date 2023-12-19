@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { test } from '../../pages/fixtures';
+import { test } from '../../../pages/fixtures';
 
 const CATEGORY_PATH = 'Home-Garden/11700/bn_1853126';
 const CATEGORY_TITLE = /Home & Garden/;

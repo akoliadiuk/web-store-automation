@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { test } from '../../pages/fixtures';
+import { test } from '../../../pages/fixtures';
 
 const ITEM_ID = '374928825389';
 const ITEM_TITLE = /Merida SADHU/;
